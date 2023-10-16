@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
-
+                String userName = name.getText().toString();
+                intent.putExtra("keyword", userName);
                 startActivity(intent);
             }
         });
